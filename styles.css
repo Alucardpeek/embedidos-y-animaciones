@@ -1,0 +1,206 @@
+*{
+    margin: 0;
+}
+
+/* Sección nav */
+
+nav{
+    display: flex;
+    background-color: rgb(132, 75, 185);
+    width: 100%;
+    min-height: 100px;
+    justify-content: center;
+}
+
+nav a{
+    color: white;
+    font-size: 32px;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-decoration: none;
+    margin-left: 1em;
+    margin-right: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: all 200ms;
+}
+
+nav a:hover{
+    text-decoration: underline;
+    color: rgb(206, 202, 202);
+}
+
+/* Sección header */
+
+iframe{
+    display: block;
+    margin-top: 2em;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow:
+        0 0 10px rgba(75, 77, 77, 0.8), /* Sombra inicial (color cian) */
+        0 0 20px rgba(108, 110, 110, 0.6),
+        0 0 30px rgba(29, 29, 29, 0.4);
+    animation: glowing-border 3s infinite alternate;
+}
+
+button{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+    width: 200px;
+    height: 100px;
+    background-color: rgb(132, 75, 185);
+    border: 0;
+    font-size: 22px;
+    color: white;
+    border-radius: 12px;
+    border: 3px solid rgb(85, 84, 84);
+    transition: all 200ms;
+}
+
+button:hover{
+    background-color: rgb(154, 67, 236);
+    transform: translateY(-10px);
+}
+
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 46px;
+    text-align: center;
+    margin-top: 1em;
+}
+
+p{
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    text-align: center;
+}
+
+.texto{
+    display: block;
+    width: 50%;
+    margin: auto;
+    margin-top: 1em;
+}
+
+.end{ /* Pequeño margin para que el footer no tenga errores de posicionamiento */
+    margin-bottom: 10em;
+}
+
+/* Sección footer */
+
+footer{
+    display: flex;
+    margin-top: 6em;
+    background-color: rgb(132, 75, 185);
+    width: 100%;
+    min-height: 80px;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+
+footer a{
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+    transform: scale(2);
+    padding: 0px 30px;
+    cursor: default;
+}
+
+footer a i{
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: rgb(199, 197, 197);
+    transition: all 200ms;
+    background: linear-gradient(
+        to right,
+        #d3d2d1 20%,
+        #c0bfbf 30%,
+        #afaeae 70%,
+        #a7a5a5 80%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 500% auto;
+    animation: textShine 5s ease-in-out infinite alternate;
+}
+
+footer a i:hover{
+    transform: scale(1.5);
+    color: rgb(243, 240, 240);
+    filter: drop-shadow(0px 0px 5px red);
+    cursor: pointer;
+}
+
+/* Pequeña animación de gradiente tipo brillo para los links del footer */
+
+@keyframes textShine {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Bordes animados para los iframes (video y mapa) */
+
+@keyframes glowing-border{
+    0%{
+        box-shadow:
+            0 0 10px rgba(75, 77, 77, 0.8), 
+            0 0 20px rgba(108, 110, 110, 0.6),
+            0 0 30px rgba(29, 29, 29, 0.4);
+    }
+    100%{
+        box-shadow:
+            0 0 10px rgba(134, 60, 163, 0.8),
+            0 0 20px rgba(179, 59, 161, 0.6),
+            0 0 30px rgba(185, 51, 141, 0.4);
+    }
+}
+
+@media (max-width: 1000px){
+    .texto{
+        width: 60%;
+    }
+}
+
+@media (max-width: 650px){
+    .texto{
+        width: 70%;
+    }
+
+    iframe{
+        width: 400px;
+    }
+
+    button{
+        width: 150px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 420px){
+    .texto{
+        width: 90%;
+    }
+
+    iframe{
+        width: 300px;
+        height: 200px;
+    }
+
+    button{
+        width: 150px;
+        height: 80px;
+    }
+}
