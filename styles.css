@@ -111,6 +111,7 @@ footer a{
     transform: scale(2);
     padding: 0px 30px;
     cursor: default;
+    transition: all 200ms;
 }
 
 footer a i{
@@ -133,9 +134,13 @@ footer a i{
     animation: textShine 5s ease-in-out infinite alternate;
 }
 
+footer a:hover{
+    color: rgb(238, 238, 238);
+}
+
 footer a i:hover{
     transform: scale(1.5);
-    color: rgb(243, 240, 240);
+    color: rgb(238, 238, 238);
     filter: drop-shadow(0px 0px 5px rgb(104, 97, 97));
     cursor: pointer;
 }
